@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jeremiah Chikota</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+</head>
+<body>
+    <div id="header">
+        <div>
+            <h3 onclick="window.location.href='./'">Jeremiah Chikota</h3>
+        </div>
+        <ul class="menubar">
+            <li class="menuitem" onclick="window.location.href='./portfolio'">Portfolio</a></li>
+            <li class="menuitem" onclick="window.location.href='./design'">Graphic Design</a></li>
+            <li class="menubutton" onclick="window.location.href='./about.html'">About</a></li>
+            <li class="menubutton" onclick="window.location.href='./resume'">Resume</a></li>
+        </ul>
+    </div>
+    <div id="project-list">
+        <h2>Select Projects</h2>
+        <div id="project-container">
+            <h2>Project Name</h2>
+            <p>Project Description</p>
+        </div>
+        <div id="project-container">
+            <h2>Project Name</h2>
+            <p>Project Description</p>
+        </div>
+        <div id="project-container">
+            <h2>Project Name</h2>
+            <p>Project Description</p>
+        </div>
+    </div>
+</body>
