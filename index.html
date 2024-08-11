@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Jeremiah Chikota</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/colors.css">
 </head>
 <body>
     <div id="header">
@@ -11,25 +11,55 @@
             <h3 onclick="window.location.href='./'">Jeremiah Chikota</h3>
         </div>
         <ul class="menubar">
-            <li class="menuitem" onclick="window.location.href='./portfolio'">Portfolio</a></li>
-            <li class="menuitem" onclick="window.location.href='./design'">Graphic Design</a></li>
+            <li class="menubutton" onclick="window.location.href='./portfolio'">Portfolio</a></li>
+            <li class="menubutton" onclick="window.location.href='./graphic-design.html'">Graphic Design</a></li>
             <li class="menubutton" onclick="window.location.href='./about.html'">About</a></li>
             <li class="menubutton" onclick="window.location.href='./resume'">Resume</a></li>
         </ul>
     </div>
-    <div id="project-list">
-        <h2>Select Projects</h2>
-        <div id="project-container">
-            <h2>Project Name</h2>
-            <p>Project Description</p>
+    <div class="project-list">
+        <h1>Select Projects</h1>
+        <div class="project-container">
+            <img class="project-image" src="data/images/blue_square.png" alt="Red Square">
+            <div class="project-info">
+                <div class="project-info-header">
+                    <h2>Project Name</h2>
+                    <h3 class="project-info-header-company">ExtraHop</h3>
+                </div>
+                <div class="project-info-body">
+                    <p>Security events often don’t involve just one computer. They are complex chains of events that tell a story. For security analysts, it can be tough to stitch individual occurrences together and get a full picture. </p>
+                    <p class="project-info-tags">Information Design, Wireframing</p>
+                </div>
+                <button class="generalbutton">Learn More</button>    
+            </div>
         </div>
-        <div id="project-container">
-            <h2>Project Name</h2>
-            <p>Project Description</p>
+        <div class="project-container">
+            <img class="project-image" src="data/images/blue_square.png" alt="Red Square">
+            <div class="project-info">
+                <div class="project-info-header">
+                    <h2>Project Name</h2>
+                    <h3 class="project-info-header-company">ExtraHop</h3>
+                </div>
+                <div class="project-info-body">
+                    <p>Security events often don’t involve just one computer. They are complex chains of events that tell a story. For security analysts, it can be tough to stitch individual occurrences together and get a full picture. </p>
+                    <p class="project-info-tags">Information Design, Wireframing</p>
+                </div>
+                <button class="generalbutton">Learn More</button>    
+            </div>
         </div>
-        <div id="project-container">
-            <h2>Project Name</h2>
-            <p>Project Description</p>
+        <div class="project-container">
+            <img class="project-image" src="data/images/blue_square.png" alt="Red Square">
+            <div class="project-info">
+                <div class="project-info-header">
+                    <h2>Project Name</h2>
+                    <h3 class="project-info-header-company">ExtraHop</h3>
+                </div>
+                <div class="project-info-body">
+                    <p>Security events often don’t involve just one computer. They are complex chains of events that tell a story. For security analysts, it can be tough to stitch individual occurrences together and get a full picture. </p>
+                    <p class="project-info-tags">Information Design, Wireframing</p>
+                </div>
+                <button class="generalbutton">Learn More</button>    
+            </div>
         </div>
     </div>
 </body>
