@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toast Notifications</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/colors.css">
+</head>
+<body>
+    <div id="header">
+        <div>
+            <h3 onclick="window.location.href='./'">Jeremiah Chikota</h3>
+        </div>
+        <ul class="menubar">
+            <li class="menubutton" onclick="window.location.href='../portfolio.html'">Portfolio</li>
+            <li class="menubutton" onclick="window.location.href='../graphic-design.html'">Graphic Design</li>
+            <li class="menubutton" onclick="window.location.href='../about.html'">About</li>
+            <li class="menubutton">
+                <a href="data/pdfs/Resume - Aug2024 - draft1.pdf" download="JeremiahChikota.pdf">Resume</a>
+            </li>
+        </ul>
+    </div>
+    <div class="about-container">
+        <div class="title-container">
+            <h1>Toast Notifications</h1>
+            <p>ExtraHop Networks, 2023</p>
+        </div>
+        <div class="portfolio-container">
+            <h2>Context</h2>
+            <p>ExtraHop is a cybersecurity tool that users access through their browser. The system not only visualizes data, but allows users to make a number of configurations and changes from within the user interface.</p>
+        </div>
+        <div class="portfolio-container">
+            <h2>Design Problem</h2>
+            <p>Many years ago, when ExtraHop was a young start up, and had nothing that resembled a design team, somebody added toast notifications in the system. While the intention was in the right place, the implementation was poor at best.<br><br>One issue was that the toast notifications were ALWAYS YELLOW! No matter if the message was conveying a success, error, or warning, the toast notification always appeared in yellow. Additionally, the behavior of the notifications was inconsistent and could sometimes result in a chain of toast notifications covering the screen.<br><br>Something had to be done!</p>
+        </div>
+        <div class="portfolio-container">
+            <h2>Goals</h2>
+            <p>By reviewing known best practices around toast notifications, ExtraHop’s UI can do a better job of communicating information to users. A more familiar and predictable interface will allow users to user the product with ease and confidence.</p>
+            <h5>Design Goals</h5>
+            <div>
+                <ul>
+                    <li>Research best practices for implementing Toast Notifications</li>
+                    <li>Identify mistakes in previous implementation</li>
+                    <li>Update toast notification to match established design system</li>
+                </ul>
+            </div>
+        </div>
+        <div class="portfolio-container">
+            <h2>Process</h2>
+            <h4>Industry Standards</h4>
+            <p>To begin this design process, I started by researching industry standards for implementing toast notifications. I spent time reviewing the design guidelines for Google’s material.io, Hewlett Packard, and Adobe. From these resources, I gathered the following general guidelines:</p>
+            <div>
+                <ul>
+                    <li>Toast notifications should be short-lived, with a maximum lifetime of 8 seconds</li>
+                    <li>Notifications should never be the only way for a user to see a piece of information, instead use them to reassure a user about an action they have just completed</li>
+                    <li>Toast notifications should be simple; make sure users can read them in 2 seconds</li>
+                </ul>
+            </div>
+            <p>Sources: 
+                <a href="https://design-system.hpe.design/templates/toast-notifications" target="_blank">Hewlett Packard Enterprise</a>, 
+                <a href="https://m3.material.io/components/snackbar/overview" target="_blank">Material Design (Google)</a>, 
+                <a href="https://spectrum.adobe.com/page/toast/" target="_blank">Adobe</a>,
+                <a href="https://www.lightningdesignsystem.com/components/toast/" target="_blank">Salesforce</a>
+            </p>    
+            <h4>Review of Existing Implementation</h4>
+            <p>After gathering a few general guidelines, I reviewed our product’s implementation. I also took time to review defect and support tickets that had been filed over the years related to toast notifications. In many ways, our product broke many of the guidelines that I had previously researched.</p><br><br>
+            <p>One issue that spanned all toast notifications was that there was a <u>lot</u> of text, breaking the “keep it simple” rule. Quite a few notifications had redundant text, telling the user the same piece of information in both the header and body of the notification. There were also notifications communicating an error that had too many words and would vaguely suggest contacting the ExtraHop Administrator (who is that?).</p>
+            <img src="../data/images/toast-old-toasts.png">
+            <p>Another pitfall the existing design fell into was <i>Notification Waterfalls</i>. Having an expiry time for notifications was optional, so there were a number of cases where the notifications would live longer than the recommended 8 seconds. Additionally, new notifications did not dismiss those before them, leading to a cascading list of toast notifications that would completely fill the right side of the screen.</p>
+            <img src="../data/images/toast-old-toasts-2.png">
+            <h4>Ideation</h4>
+            <p>The next step in the process was to reimagine what toast notifications should look like in our new system. One of the elements I wanted to analyze was the toast notification’s placement within the browser. Traditionally, ExtraHop’s toast notifications were placed in the upper-right corner. However, after reviewing designs from HPE, I wanted to evaluate placing them in the center of the page.</p>
+            <h5>Center Align</h5>
+            <p>Placing offers a number of advantages to the current placement. For one, there was only one page that contained interactive elements in that place, reducing the risk of hiding content. Additionally, a notification placed in the center might more easily catch the users eye. There were some downsides, such as the fact that the space was much smaller so long text wouldn’t work as well in this space.</p>
+            <img src="../data/images/toast-placement-center.png">
+            <h5>Right Align</h5>
+            <p>Keeping the toast notifications on the right side had benefits such as predictability for existing users, and less work to make existing pages more compatible. However, this placement requires hovering the notification over content below, which could obscure other page elements temporarily.</p>
+            <img src="../data/images/toast-placement-right.png">
+            <h5>Wire Framing</h5>
+            <p>After deciding that center placement would work better with most of the UI's pages I spent some time completing wireframes of the new design. I wanted to elaborate on the edge cases of this design where there were buttons or exceptionally long text strings. I completed this wireframing exercise on our various page layouts to get a full understanding of all the changes.</p>
+            <img src="../data/images/toast-placement-center-dual.png">
+            <div class="hero-container">
+                <div>
+                    <p>"I really like the way this looks" - User</p>
+                </div>
+            </div>
+            <h4>Design Review</h4>
+            <p>After completing my research and low-fidelity designs, I presented the findings to the UX team. In our discussion, we reviewed our past implementations and where we didn’t align with industry best practices. We also discussed the pros and cons of the placement options, and started to expand upon what else we could do with toast notifications. For example, what would this new element look like if there were buttons, or if we decided to include a status icon?</p>
+        </div>
+        <div class="portfolio-container">
+            <h2>Solution</h2>
+            <p>The final implementation featured a number of changes to bring ExtraHop’s toast notifications up to standard.<br><br>Here are more details about the final design elements:</p>
+            <h4>Information Layout</h4>
+            <p>Toast notifications now feature a single text body; gone are the redundant headers. Working with our technical writers, we reduced the number of words used in these messages. There are of course rare cases where the text may need to span more than one line.</p>
+            <img src="../data/images/toast-new-old.png">
+            <h4>Theming</h4>
+            <p>The new design moves away from the repulsive sunshine-yellow and instead sets the color of the toast notification to match the system's theme.</p>
+            <img src="../data/images/toast-light-dark.jpg">
+            <h4>Behavior</h4>
+            <p>Finally, the code was updated to have a hard limit of 8 seconds per toast notification. Working with our Technical Writers, we created a standard not only for how text should read in toast notifications, but how long notifications should last. For example, simple one-word confirmations like “Saved” or “Deleted” only needed to be around for 4 seconds. A more complex error should remain until the 8 second limit.</p>
+        </div>
+        <div class="portfolio-container">
+            <h2>Implementation</h2>
+            <p>Due to limited front end developers, I actually did the coding to make these changes! The work was split across two merge requests (MRs). The first dealt with changing the design elements of toast notification. I implemented the color changes and added the maximum timeout for all notifications.<br><br>The second MR was more tedious. It involved me reviewing every case where we had implemented in the past. I worked with a technical writer to fit all of these messages to our new wording framework so that they matched our new, simpler style guide.</p>
+        </div>
+        <div class="hero-container">
+            <div>
+                <h2>328</h2>
+            </div>
+            <div>
+                <p>lines of code changed</p>
+            </div>
+        </div>
+        <div class="portfolio-container">
+            <h2>What's Next</h2>
+            <p>With some of the full design elements shelved, I hope to be able to further enhance toast notifications by adding additional information like status, actions, and more!</p>
+        </div>
+    </div>
+</body>
