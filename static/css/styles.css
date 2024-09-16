@@ -219,6 +219,18 @@ div ul li {
 .image-text-container h2 {
     margin: 0px;
 }
+.text-container {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 16px;
+}
+.text-container h2 {
+    margin: 0px;
+}
 .portfolio-container{
     display: flex;
     flex-direction: column;
