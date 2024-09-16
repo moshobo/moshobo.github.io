@@ -1,5 +1,12 @@
 @import 'colors.css';
 
+/* Spacing Standards */
+/* XL - 48px */
+/* L - 32 px*/
+/* M - 16px */
+/* S - 8px */
+/* XS - 4px */
+
 body {
     font-family: sans-serif;
     width: 100%;
@@ -13,9 +20,11 @@ body {
 }
 h1 {
     font-size: 34px;
+    color: var(--background-3);
 }
 h2 {
     font-size: 30px;
+    color: var(--background-2);
 }
 h3 {
     font-size: 24px;
@@ -28,6 +37,9 @@ h5 {
 }
 p {
     font-size: 18px;
+}
+a {
+    color: inherit;
 }
 div ul {
     margin: 0px;
@@ -44,7 +56,7 @@ div ul li {
     color: var(--foreground-4)
 }
 #header h3 {
-    margin-left: 12px;
+    margin-left: 16px;
 }
 .menubar {
     list-style-type: none;
@@ -54,10 +66,11 @@ div ul li {
     flex-direction: row;
 }
 .menubutton {
-    color: var(--background-4);
+    color: var(--foreground-0);
     margin-right: 16px;
     text-decoration: none;
     text-align: center;
+    cursor: pointer;
 }
 .menubutton a {
     text-decoration: none;
@@ -104,20 +117,21 @@ div ul li {
     width: 100%;
 }
 .generalbutton {
-    background-color: var(--background-3);
-    color: var(--foreground-0);
+    background-color: var(--foreground-4);
+    color: var(--background-4);
     border: none;
+    border-radius: 8px;
     padding: 8px 16px;
+    font-size: 18px;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
-.generalbutton:hover{
-    background-color: var(--background-2);
+.generalbutton:hover {
+    background-color: var(--foreground-3);
 }
 .project-image {
     width: 200px;
-    /* height: 200px; */
-    /* width: auto; */
     height: auto;
     display: block;
 }
@@ -127,17 +141,21 @@ div ul li {
     justify-content: space-between;
     align-items: center;
     padding: 48px;
-    /*margin: 0 auto;*/
     width: 100%;
-    /*flex-grow: 1;*/
-    /*width: auto;*/
     max-width: 850px;
+}
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 16px;
+    gap: 8px;
 }
 .design-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .design-grid {
     border: 0px;
@@ -145,9 +163,6 @@ div ul li {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     padding: 10px 10px 10px 10px;
-}
-.design-container h2 {
-    margin: 0px;
 }
 .grid-tile {
     width: 200px;
@@ -172,19 +187,17 @@ div ul li {
     pointer-events: none;
 }
 .grid-tile:hover::before{
-    background:rgba(255, 255, 255, 0.1);
+    background:rgba(255, 255, 255, 0.3);
 }
 .image-container{
-    display: flex; /* Use flexbox to shrink-wrap the container around the image */
-    justify-content: center; /* Center image horizontally (optional) */
-    align-items: center; /* Center image vertically (optional) */
-    width: fit-content; /* Ensure container width only wraps around the image */
-    height: fit-content; /* Ensure container height only wraps around the image */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
 }
 .image-container img {
     width: 200px;
-    /* height: 200px; */
-    /* width: auto; */
     height: auto;
     display: block;
 }
@@ -194,21 +207,28 @@ div ul li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 32px;
 }
 .image-text-container img {
     width: 50%;
-    margin-right: 24px;
+    height: auto;
+    object-fit: contain;
+}
+.image-text-container h2 {
+    margin: 0px;
 }
 .portfolio-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
-    margin-top: 24px;
+    margin-top: 32px;
     width: 100%;
 }
 .portfolio-container h2 {
-    margin: 20px 0px 12px 0px;
+    margin: 16px 0px 16px 0px;
 }
 .portfolio-container h4 {
     margin: 16px 0px 8px 0px;
@@ -229,11 +249,12 @@ div ul li {
     border-radius: 4px;
     width: 100%;
     padding: 24px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 .hero-container h2 {
     font-size: 90px;
+    color: var(--foreground-0);
     margin: 0px;
     padding: 0px;
 }
@@ -252,26 +273,47 @@ div ul li {
 .icon-container {
     background-color: var(--background-0);
     border-radius: 8px;
-    margin-right: 24px;
-    display: flex; /* Use flexbox to shrink-wrap the container around the image */
-    justify-content: center; /* Center image horizontally (optional) */
-    align-items: center; /* Center image vertically (optional) */
-    width: fit-content; /* Ensure container width only wraps around the image */
-    height: fit-content; /* Ensure container height only wraps around the image */
+    margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
 }
 .tag-container {
     display: flex;
     flex-wrap: wrap;
     margin: 8px 0px;
-    gap: 4px; /* Space between tags */
+    gap: 4px;
 }
 .tag {
-    background-color: var(--background-4); /* Tag background color */
-    color: var(--foreground-0); /* Text color */
+    background-color: var(--background-4);
+    color: var(--foreground-0);
     padding: 5px 10px;
-    border-radius: 20px; /* Rounded corners */
+    border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
     display: inline-block;
-    white-space: nowrap; /* Prevents text from breaking to a new line */
+    white-space: nowrap;
+}
+
+@media (max-width: 750px) { /* Change for small screens */
+    .image-text-container {
+        align-items: center;
+        flex-direction: column;
+    }
+    .image-text-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .design-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .project-container {
+        flex-direction: column;
+    }
+    .project-info-footer {
+        justify-content: flex-start;
+    }
 }
