@@ -4,6 +4,7 @@
     <title>About</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="static/css/colors.css">
+    <link rel="icon" href="data/images/favicon.png" type="image/png">
 </head>
 <body>
     <div id="header">
@@ -20,7 +21,7 @@
         </ul>
     </div>
     <div class="about-container">
-        <h1>About me</h1>
+        <h1>About Me</h1>
         <p>
             For as long as I can rememeber, I have had an artistic drive. It started out doing sketches as a young kid,
             and I continuted to experiment with other mediums at a young age. In high school, I was really into photography 
@@ -33,11 +34,16 @@
             role is far from what a UX designer might do, both have overlap in that we think in the mindset of our userbase. 
             I was able to transition into a UX role in April 2023, and have enjoyed the challenges this line of work brings.
         </p>
-        <h1>Contact Me</h1>
-        <p>
-            Want to learn more about my journey or having an interesting opportunity to share?<br><br>
-            
-            Reach out: jeremiahchikota[at]gmail.com
-        </p>
+        <div style="width: 100%;">
+            <h3>Contact Me</h3>
+            <p>
+                Want to learn more about my journey or having an interesting opportunity to share?<br><br>Reach out: jeremiahchikota[at]gmail.com
+            </p>
+            <div class="button-container">
+                <button class="generalbutton" onclick="window.location.href='mailto:jeremiahchikota@gmail.com?subject=Hey Jeremiah'">Email Me</button>
+                <button class="generalbutton" onclick="window.open('https://www.linkedin.com/in/jeremiahchikota/', '_blank')">LinkedIn</button>
+                <button class="generalbutton" onclick="window.location.href='data/pdfs/Resume - Aug2024 - draft1.pdf'" download="JeremiahChikota.pdf">Download Resume</button>
+            </div>
+        </div>
     </div>
 </body>
