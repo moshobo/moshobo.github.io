@@ -31,7 +31,7 @@
         </div>
         <div class="portfolio-container">
             <h2>Design Problem</h2>
-            <p>Many years ago, when ExtraHop was a young start up, and had nothing that resembled a design team, somebody added toast notifications in the system. While the intention was in the right place, the implementation was poor at best.<br><br>One issue was that the toast notifications were ALWAYS YELLOW! No matter if the message was conveying a success, error, or warning, the toast notification always appeared in yellow. Additionally, the behavior of the notifications was inconsistent and could sometimes result in a chain of toast notifications covering the screen.<br><br>Something had to be done!</p>
+            <p>Many years ago, when ExtraHop was a young start up, somebody added toast notifications in the system. While the intention was in the right place, the implementation was poor at best.<br><br>One issue was that the toast notifications were ALWAYS YELLOW! No matter if the message was conveying a success, error, or warning, the toast notification always appeared in yellow. Additionally, the behavior of the notifications was inconsistent and could sometimes result in a chain of toast notifications covering the screen.<br><br>Something had to be done!</p>
         </div>
         <div class="portfolio-container">
             <h2>Goals</h2>
@@ -64,14 +64,15 @@
             </p>    
             <h4>Review of Existing Implementation</h4>
             <p>After gathering a few general guidelines, I reviewed our product’s implementation. I also took time to review defect and support tickets that had been filed over the years related to toast notifications. In many ways, our product broke many of the guidelines that I had previously researched.</p><br><br>
-            <p>One issue that spanned all toast notifications was that there was a <u>lot</u> of text, breaking the “keep it simple” rule. Quite a few notifications had redundant text, telling the user the same piece of information in both the header and body of the notification. There were also notifications communicating an error that had too many words and would vaguely suggest contacting the ExtraHop Administrator (who is that?).</p>
+            <p>One issue that spanned all of our  toast notifications was that there was a <ul>lot</ul> of text, breaking the “keep it simple” rule. Quite a few notifications had redundant text, telling the user the same piece of information in both the header and body of the notification. There were also wordy error notifications that would vaguely suggest contacting the ExtraHop Administrator (who is that?).
+            </p>
             <img src="../data/images/toast-old-toasts.png">
-            <p>Another pitfall the existing design fell into was <i>Notification Waterfalls</i>. Having an expiry time for notifications was optional, so there were a number of cases where the notifications would live longer than the recommended 8 seconds. Additionally, new notifications did not dismiss those before them, leading to a cascading list of toast notifications that would completely fill the right side of the screen.</p>
+            <p>Another pitfall of existing design was <i>Notification Waterfalls</i>. Having an expiry time for notifications was optional, so there were a number of cases where the notifications would live longer than the recommended 8 seconds. Additionally, new notifications did not dismiss those before them, leading to a cascading list of toast notifications that would completely fill the right side of the screen.</p>
             <img src="../data/images/toast-old-toasts-2.png">
             <h4>Ideation</h4>
             <p>The next step in the process was to reimagine what toast notifications should look like in our new system. One of the elements I wanted to analyze was the toast notification’s placement within the browser. Traditionally, ExtraHop’s toast notifications were placed in the upper-right corner. However, after reviewing designs from HPE, I wanted to evaluate placing them in the center of the page.</p>
             <h5>Center Align</h5>
-            <p>Placing offers a number of advantages to the current placement. For one, there was only one page that contained interactive elements in that place, reducing the risk of hiding content. Additionally, a notification placed in the center might more easily catch the users eye. There were some downsides, such as the fact that the space was much smaller so long text wouldn’t work as well in this space.</p>
+            <p>Placing the notification in the middle of the viewport offers a number of advantages over the current placement. For one, there was only one page with centered interactive elements, reducing the risk of overlapping content. Additionally, a notification placed in the center might more easily catch the user’s eye. There were some downsides, such as the limited horizontal space that wouldn’t allow long text to work as well in this space.</p>
             <img src="../data/images/toast-placement-center.png">
             <h5>Right Align</h5>
             <p>Keeping the toast notifications on the right side had benefits such as predictability for existing users, and less work to make existing pages more compatible. However, this placement requires hovering the notification over content below, which could obscure other page elements temporarily.</p>
