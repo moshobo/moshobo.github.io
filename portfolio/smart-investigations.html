@@ -9,98 +9,165 @@
 <body>
     <div id="header">
         <div>
-            <h3 onclick="window.location.href='.././'">Jeremiah Chikota</h3>
+            <h3 class="headerbutton" onclick="window.location.href='.././'">Jeremiah Chikota</h3>
         </div>
         <ul class="menubar">
             <li class="menubutton" onclick="window.location.href='../portfolio.html'">Portfolio</li>
             <li class="menubutton" onclick="window.location.href='../graphic-design.html'">Graphic Design</li>
             <li class="menubutton" onclick="window.location.href='../about.html'">About</li>
             <li class="menubutton">
-                <a href="data/pdfs/Resume - Aug2024 - draft1.pdf" download="JeremiahChikota.pdf">Resume</a>
+                <a onclick="window.location.href='data/pdfs/JeremiahChikota - PublicResume - Aug2024.pdf'" download="JeremiahChikota.pdf">Resume</a>
             </li>
         </ul>
     </div>
     <div class="about-container">
         <div class="title-container">
             <h1>Smart Investigations</h1>
-            <p>ExtraHop Networks, 2024</p>
-        </div>
-        <div class="portfolio-container">
-            <h2>Context</h2>
-            <p>As a cybersecurity tool, ExtraHop creates detections based on anomalous computer communication. The daily job of a Security Analyst is to triage these detections to determine whether they are malicious or expected computer behavior.</p>
-        </div>
-        <div class="portfolio-container">
-            <h2>Design Problem</h2>
-            <p>Security events often don’t involve just one computer. They are complex chains of events that tell a story. For security analysts, it can be tough to stitch individual occurrences together and get a full picture.</p>
-        </div>
-        <div class="hero-container">
-            <div>
-                <h2>250</h2>
+            <div class="project-metadata">
+                <div class="data-container">
+                    <p class="data-label-title">Company</p>
+                    <p class="data-label">ExtraHop</p>
+                </div>
+                <div class="data-container">
+                    <p class="data-label-title">Duration</p>
+                    <p class="data-label">4 Months</p>
+                </div>
+                <div class="data-container">
+                    <p class="data-label-title">Year</p>
+                    <p class="data-label">2024</p>
+                </div>
+                <div class="data-container">
+                    <p class="data-label-title">Role</p>
+                    <p class="data-label">UX Design, UX Research</p>
+                </div>
             </div>
-            <div>
-                <p>potential security events detected</p>
+            <div class="tag-container">
+                <p class="tag">Information Architecture</p>
+                <p class="tag">User Research</p>
             </div>
         </div>
         <div class="portfolio-container">
-            <h2>Goals</h2>
+            <div class="portfolio-container-header">
+                <h2>Context</h2>
+                <hr>
+            </div>
+            <p>As a cybersecurity tool, ExtraHop creates detections based on anomalous computer communication. A security analyst’s daily job is to triage these detections to determine whether they are truly malicious or expected normal computer behavior.</p>
+            <img class="image-container" src="../data/images/si_Solution_InvDetail.png">
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Design Problem</h2>
+                <hr>
+            </div>
+            <p>Security incidents often involve more than just one computer. They are a complex sequence of events that tell a story. For security analysts, it can be tough to stitch individual occurrences together and get a full picture of a malicious attack.</p>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Goals</h2>
+                <hr>
+            </div>
             <p>By visually summarizing the data about an investigation, security analysts will be able to quickly understand the nature of the threat. With this information, they will be able to triage detections faster and reduce their time to respond.</p>
             <h5>Design Goals</h5>
             <div>
                 <ul>
                     <li>Summarize data about a series of detections</li>
-                    <li>Allow users to track and record their progress</li>
+                    <li>Allow users to track and record their progress as they review information</li>
                 </ul>
             </div>
             <h5>Business Goals</h5>
             <div>
                 <ul>
-                    <li>Reduce analyst’s time to investigate and respond</li>
+                    <li>Reduce analysts’ time to investigate and respond</li>
                     <li>Increase user confidence in the validity of an attack</li>
-                    <li>Increase user engagement</li>
+                    <li>Increase user engagement within ExtraHop</li>
                 </ul>
             </div>
         </div>
         <div class="portfolio-container">
-            <h2>Process</h2>
+            <div class="portfolio-container-header">
+                <h2>Process</h2>
+                <hr>
+            </div>
             <h4>Existing Solutions</h4>
-            <p>In a previous firmware version, a new feature called “Investigations” had been added to the product. Investigations allowed users to manually group detections together, after which the feature would create a visual map of how the detections related to one another.<br><br>This product feature didn’t meet many of our current design goals. Primarily, it didn’t allow users to easily summarize information about the investigation. There were also very few actions a user could do to keep track of their work. Overall, this feature didn’t create a very compelling workspace, and saw little usage.</p>
+            <p>In a previous firmware version, a new feature called “Investigations” had been added to ExtraHop. Investigations allowed users to manually group detections together, after which the system would create a visual map of how the detections related to one another.<br><br>This product feature didn’t meet many of our current design goals. Primarily, it didn’t allow users to easily summarize information about the investigation. Users were only able to write a single note for each investigation, but we received feedback from users that they would like to keep track of their work with assignees and progress statuses too. Overall, this feature didn’t create a very compelling workspace and saw little usage.</p>
+            <img class="image-container" src="../data/images/si_9-5-5_AttackMap.png">
             <h4>User Research</h4>
-            <p>To better understand how security analysts investigate potential cybersecurity incidents, I interviewed a number of active customers. In these interviews, I worked to get an understanding of what were the most important pieces of information to an analyst when they’re viewing something for the first time.<br><br>The biggest takeaway from this research was that analysts first want to understand the <u>critical devices</u> that might be compromised. For example, servers that contain financial data will elicit a more serious response than the smart fridge in the cafeteria.</p>
+            <p>To better understand how analysts investigate potential cybersecurity incidents, I interviewed a number of existing customers. In these interviews, I got an understanding of the most important pieces of information to an analyst when they’re viewing a detection for the first time.<br><br>The biggest takeaway from my research was that analysts first want to understand the <i>critical devices</i> that might be compromised. For example, servers that contain financial data will elicit a more serious response than the smart fridge in the cafeteria.</p>
             <div class="hero-container">
                 <div>
                     <p>“My eye gets drawn to the overly sized detection map”</p>
                 </div>
             </div>
-            <p>Another learning was that analysts preferred seeing hard evidence than the visuals that dominated the previous investigation page design. Two different users commented that with visuals the page often became too cluttered, making it hard for them to know what to look at first, with one saying “My eye gets drawn to the overly sized detection map”.</p>
+            <p>Another learning was that analysts prefer seeing hard evidence rather than the visuals that dominated the previous investigation page design. Two different users commented that with large visuals the page often became too cluttered, making it hard for them to know what to look at first. </p>
             <h4>Ideation</h4>
-            <p>Having gathered feedback from users on what was most important to them, I worked to develop designs for the three key parts of the investigation workflow.</p>
-            <h5>Summary Page</h5>
-            <p>For this page I explored splitting the information to display into three key areas; detections, participants, and response. Visually, these elements are laid out from left to right, as this matches the way analysts told us that they triage investigations.</p>
-            <img src="../data/images/si-summary-page.png">
-            <h5>Timeline</h5>
-            <p>The timeline is a part of the summary page that works to show the user how an attack unfolded over time. Given the feedback that the existing visuals were too heavy, I worked on a new approach that would hold less visual weight. The design I landed on was inspired by Gantt charts that are used in engineering projects to demonstrate the relationship between events or tasks over the course of a period of time.</p>
-            <img src="../data/images/si-timeline.png">
+            <p>Having gathered feedback from users on what was most important to them, I developed designs for the three key parts of the investigation workflow.</p>
+            <h5>Investigation Summary Page</h5>
+            <p>For this page I explored splitting the information to display into three key areas; detections, participants, and response. Visually, these elements are laid out from left to right, as this matches the importance of the information as the analysts explained to me during the research phase.</p>
+            <img src="../data/images/si_summary-double-2.png">
+            <h5>Investigation Timeline</h5>
+            <p>The timeline is a part of the summary page that shows the user how an attack unfolded over time. Given the feedback that the existing visuals were too heavy, I worked on a new approach that would hold less visual weight. The design I landed on was inspired by Gantt charts that are used in engineering projects to demonstrate the relationship between events or tasks over the course of a period of time.</p>
+            <img src="../data/images/si_timeline-triple.png">
             <h5>Investigation Settings Page</h5>
-            <p>With an expectation that the volume of investigations would increase, the settings page would be a part of the workflow of analysts and their managers to keep on top of critical tasks. One of our business goals was to reduce analysts’ time to investigate or respond, typically measured in Mean-Time-to-Respond (MTTR). During user interviews on this subject, I found that there was a mixed appetite for displaying these metrics. Some users worried that displaying these metrics without the right context might make management set unachievable goals. Through design iterations, I worked to find a balance between providing information to users about their critical tasks, without adding unwarranted stress to an already hectic job.</p>
-            <img src="../data/images/si-settings-page.png">
+            <p>It was expected that after the feature’s launch, customers would receive 10-20 smart investigations per year. Therefore the settings page would become a critical part of the workflow of analysts and their managers to stay on top of critical tasks. One of our business goals was to reduce analysts’ time to investigate or respond, typically measured in Mean-Time-to-Respond (MTTR). During user interviews on this subject, I found that there was a mixed appetite for displaying these metrics. Some users worried that displaying MTTR metrics without the right context might make management set unachievable goals. Through design iterations, I worked to find a balance between providing information to users about their critical tasks without adding unwarranted stress to an already hectic job.</p>
+            <img src="../data/images/si_settings-triple.png">
             <h5>Security Overview Page</h5>
-            <p>When security analysts first log into ExtraHop, the first page they land on is the Security Overview. Elements of this page are designed to alert analysts to the most pressing tasks to work on. In the ideation process I worked to highlight Investigations to users on the Security Overview. Through design iterations, I evaluated what information was most important to users at a first glance. I played around with using our “Hero Count” to show key metrics like “Assigned to You”. Another option was to include a bar chart which would let users quickly understand the status of all investigations.</p>
+            <p>When security analysts first log into ExtraHop, the first page they land on is the Security Overview. Elements of this page are designed to alert analysts to the most pressing tasks to work on. Through design iterations, I evaluated what information was most important to users at a first glance. I played around with using our “Hero Count” component to show key metrics like “Assigned to You”. Another option I considered was to include a bar chart which would let users quickly understand the status of all investigations.</p>
+            <img class="image-container" src="../data/images/si_Security-Overview-single.png">
             <h4>Customer Design Review</h4>
-            <p>After internal design reviews, I had opportunities to present Figma prototypes of the proposed designs to our customers. In these sessions, I focused on observing the usability of the design.<br><br>In their feedback, users appreciated the separate columns which allowed them to quickly glance at information before clicking in to get more details. They also saw the notes and assignment functions as critical to keeping a record of what was being investigated.<br><br>One element that users seemed to struggle with were the chevron arrows with security categories. Many users reported that they expected to be able to click on the chevrons to filter items within the investigation. I incorporated this feedback into the final design by applying a less “active” styling and so that the elements looked less like buttons.</p>
+            <p>After internal design reviews, I had opportunities to present Figma prototypes of the proposed designs to our customers. In these sessions, I focused on observing the usability of the design.<br><br>In their feedback, users appreciated the separate columns which allowed them to quickly glance at information before clicking in to get more details. They also saw the notes and assignment functions as critical to keeping a record of what was being investigated.<br><br>One element that users seemed to struggle with were the chevron arrows with security categories. Many users reported that they expected to be able to click on the chevrons to filter items within the investigation. I incorporated this feedback into the final design by applying a less “active” styling so that the elements looked less like buttons.</p>
         </div>
         <div class="portfolio-container">
-            <h2>Solution</h2>
-            <p>The final solution saw a number of changes from what had been designed in Figma. One challenge I faced during implementation was a request to de-scope the project. During our story writing process, Engineering and Product leadership identified a lack of sufficient developer capacity to meet the delivery timeline. Since the delivery date could not be moved, I found a way to design an MVP by removing some component  animations and re-using existing components.<br><br>Here are more details about the final design elements:</p>
+            <div class="portfolio-container-header">
+                <h2>Solution</h2>
+                <hr>
+            </div>
+            <p>The final solution saw a number of changes from what I had designed in Figma. One challenge I faced during implementation was a request to de-scope the project. During our story writing process, engineering and product leadership identified a lack of sufficient developer capacity to meet the delivery timeline. Since the delivery date could not be moved, I found a way to design an MVP by removing some component animations and re-using existing components.<br><br>Here are more details about the final design elements:</p>
             <h4>Investigation Summary Page</h4>
             <p>This page is the main workspace for analysts triaging an investigation. The top of the page consists of information about the nature of the investigation including details about the type of attack. The core of the page is broken down into three sections; detection, participants and response.</p>
+            <img class="image-container" src="../data/images/si_Solution_InvDetail.png">
+            <img class="image-container" src="../data/images/si_Solution_InvDetail-detectionpanel.png">
+            <img class="image-container" src="../data/images/si_Solution_InvDetail-AttackMap.png">
             <h4>Investigation Settings Page</h4>
-            <p>The settings page is designed for managing and reviewing all investigations. The key component of the page is the table, which includes fields such as assignee or status, enabling analysts to understand the highest priority item for them to work on.<br><br>New columns in the table allow analysts to answer questions like “Which investigations are assigned to me?” or “How many investigations are still in progress?”</p>
+            <p>The settings page is designed for managing and reviewing all investigations. The key component of the page is the table, which includes fields such as assignee and status, enabling analysts to understand the highest priority item for them to work on.<br><br>New columns in the table allow analysts to answer questions like “Which investigations are assigned to me?” or “How many investigations are still in progress?”.</p>
+            <img class="image-container" src="../data/images/si_Solution_InvSettings.png">
             <h4>Security Overview Page</h4>
             <p>To alert users to new investigations, the updated design reuses our “Hero Count” component to display a large number that indicates the number of new detections. This strong visual component aims to grab the user’s attention as soon as they log in to make them aware of any high-priority items. To aid in this, the count is placed in the top-center of the page.</p>
+            <img class="image-container" src="../data/images/si_Solution_SecOverview.png">
         </div>
         <div class="portfolio-container">
-            <h2>Results</h2>
-            <p>In post-release interviews with customers, the feedback was very positive. Initial telemetry shows that usage of the investigation feature grew by 40% 6 months after release.</p>
+            <div class="portfolio-container-header">
+                <h2>Results</h2>
+                <hr>
+            </div>
+            <p>In post-release interviews with customers, the feedback was very positive. Initial telemetry shows that usage of the investigation feature grew by 40% six months after release.</p>
+        </div>
+        <div class="hero-container">
+            <div>
+                <h2>200+</h2>
+            </div>
+            <div>
+                <p>potential incidents in nine months</p>
+            </div>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Demo</h2>
+                <hr>
+            </div>
+            <p>Try this feature out for yourself on the <a href="https://www.extrahop.com/demo">ExtraHop online demo!</a></p>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Additional Content</h2>
+                <hr>
+            </div>
+            <img class="image-container" src="../data/images/si_Figma_Component-participant-list.png">
+            <p>Finalized Figma Component for the participant list</a></p>
+            <img class="image-container" src="../data/images/si_Figma_AnnotatedDeliverable.png">
+            <p>Finalized Figma Deliverable with comments and workflow arrows</a></p>
+        </div>
+        <div class="button-container">
+            <button class="generalbutton" onclick="window.location.href='../portfolio.html'">Back to Portfolio</button>
         </div>
     </div>
 </body>

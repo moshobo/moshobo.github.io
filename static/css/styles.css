@@ -2,7 +2,7 @@
 
 /* Spacing Standards */
 /* XL - 48px */
-/* L - 32 px*/
+/* L - 32px*/
 /* M - 16px */
 /* S - 8px */
 /* XS - 4px */
@@ -20,20 +20,25 @@ body {
 }
 h1 {
     font-size: 34px;
-    color: var(--background-3);
+    color: var(--background-5);
+    font-weight: 200;
 }
 h2 {
     font-size: 30px;
-    color: var(--background-2);
+    color: var(--background-5);
+    font-weight: 200;
 }
 h3 {
     font-size: 24px;
+    font-weight: 200;
 }
 h4 {
     font-size: 20px;
+    font-weight: 200;
 }
 h5 {
     font-size: 18px;
+    font-weight: 200;
 }
 p {
     font-size: 18px;
@@ -41,11 +46,20 @@ p {
 a {
     color: inherit;
 }
+hr {
+    border: 0;
+    clear: both;
+    display: block;            
+    background-color: var(--gray-0);
+    height: 1px;
+    width: 100%;
+}
 div ul {
     margin: 0px;
 }
 div ul li {
     margin: 8px;
+    font-size: 18px;
 }
 #header {
     display: flex;
@@ -53,10 +67,18 @@ div ul li {
     align-items: center;
     width: 100%;
     background-color: var(--background-0);
-    color: var(--foreground-4)
+    color: var(--foreground-0)
 }
 #header h3 {
     margin-left: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.headerbutton {
+    cursor: pointer;
+}
+.headerbutton:hover {
+    color: var(--foreground-4);
 }
 .menubar {
     list-style-type: none;
@@ -90,6 +112,7 @@ div ul li {
 .project-container {
     display: flex;
     flex-direction: row;
+    height: 200px;
     padding: 24px;
 }
 .project-info {
@@ -100,29 +123,42 @@ div ul li {
 }
 .project-info-header {
     margin: 0px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 .project-info-header h2 {
+    display: inline-block;
+    width: auto;
     margin: 0px;
+    cursor: pointer;
+}
+.project-info-header:hover h2 {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 .project-info-header-company {
-    color: var(--background-4);
+    color: var(--gray-1);
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 200;
     margin: 0px;
+}
+.project-info-body{
+    margin-bottom: 16px;
 }
 .project-info-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
+    gap: 200px;
 }
 .generalbutton {
-    background-color: var(--foreground-4);
+    border-color: var(--background-5);
+    background-color: var(--foreground-0);
     color: var(--background-4);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 4px 8px;
     font-size: 18px;
+    font-weight: 200;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -170,6 +206,7 @@ div ul li {
     background-color: var(--background-3);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .grid-tile img {
     height: 100%;
@@ -241,17 +278,24 @@ div ul li {
 }
 .portfolio-container h2 {
     margin: 16px 0px 16px 0px;
+    white-space: nowrap;
 }
 .portfolio-container h4 {
     margin: 16px 0px 8px 0px;
     color: var(--background-4);
 }
 .portfolio-container h5 {
-    margin: 8px 0px 4px 0px;
+    margin: 16px 0px 4px 0px;
 }
 .portfolio-container p {
     margin: 0px;
     line-height: 24px;
+}
+.portfolio-container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
 }
 .hero-container {
     display: flex;
@@ -278,6 +322,7 @@ div ul li {
 }
 .title-container {
     text-align: center;
+    padding-bottom: 32px;
 }
 .title-container h1, p {
     margin: 0px;
@@ -291,6 +336,7 @@ div ul li {
     align-items: center;
     width: fit-content;
     height: fit-content;
+    cursor: pointer;
 }
 .tag-container {
     display: flex;
@@ -304,9 +350,36 @@ div ul li {
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 200;
     display: inline-block;
     white-space: nowrap;
+}
+.project-metadata {
+    display: flex;
+    flex-direction: row;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    gap: 8px;
+}
+.data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    min-width: 120px;
+    gap: 8px;
+}
+.data-label {
+    display: flex;
+    align-items: start;
+    color: var(--gray-1);
+    font-size: 18px;
+    font-weight: 200;
+}
+.data-label-title {
+    color: var(--gray-0);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 200;
 }
 
 @media (max-width: 750px) { /* Change for small screens */
