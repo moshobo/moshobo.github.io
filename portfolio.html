@@ -9,14 +9,14 @@
 <body>
     <div id="header">
         <div>
-            <h3 onclick="window.location.href='./'">Jeremiah Chikota</h3>
+            <h3 class="headerbutton" onclick="window.location.href='./'">Jeremiah Chikota</h3>
         </div>
         <ul class="menubar">
             <li class="menubutton" onclick="window.location.href='./portfolio.html'">Portfolio</li>
             <li class="menubutton" onclick="window.location.href='./graphic-design.html'">Graphic Design</li>
             <li class="menubutton" onclick="window.location.href='./about.html'">About</li>
             <li class="menubutton">
-                <a href="data/pdfs/Resume - Aug2024 - draft1.pdf" download="JeremiahChikota.pdf">Resume</a>
+                <a onclick="window.location.href='data/pdfs/JeremiahChikota - PublicResume - Aug2024.pdf'" download="JeremiahChikota.pdf">Resume</a>
             </li>
         </ul>
     </div>
@@ -27,43 +27,44 @@
         </div>
         <div class="project-container">
             <div class="icon-container">
-                <img class="project-image" src="data/images/magnifying-glass.png" alt="Smart Investigations">
+                <a onclick="window.location.href='portfolio/smart-investigations.html'"><img class="project-image" src="data/images/magnifying-glass.png" alt="Smart Investigations"></a>
             </div>
             <div class="project-info">
                 <div class="project-info-header">
-                    <h2>Smart Investigations</h2>
-                    <h3 class="project-info-header-company">ExtraHop</h3>
+                    <a onclick="window.location.href='portfolio/smart-investigations.html'"><h2>Smart Investigations</h2></a>
+                    <h5 class="project-info-header-company">ExtraHop</h5>
                 </div>
                 <div class="project-info-body">
                     <p>Security events often don’t involve just one computer. They are complex chains of events that tell a story. For security analysts, it can be tough to stitch individual occurrences together and get a full picture. </p>
+                </div>
+                <div class="project-info-footer">
                     <div class="tag-container">
                         <p class="tag">Information Architecture</p>
                         <p class="tag">User Research</p>
                     </div>
-                </div>
-                <div class="project-info-footer">
-                    <button class="generalbutton" onclick="window.location.href='portfolio/smart-investigations.html'">Learn More →</button>    
+                    <button class="generalbutton" onclick="window.location.href='portfolio/smart-investigations.html'">More →</button>
                 </div>  
             </div>
         </div>
         <div class="project-container">
             <div class="icon-container">
-                <img class="project-image" src="data/images/toast-notification.png" alt="Toast Notifications">
+                <a onclick="window.location.href='portfolio/toast-notifications.html'"><img class="project-image" src="data/images/toast-notification.png" alt="Toast Notifications"></a>
             </div>
             <div class="project-info">
                 <div class="project-info-header">
-                    <h2>Toast Notifications</h2>
-                    <h3 class="project-info-header-company">ExtraHop</h3>
+                    <a onclick="window.location.href='portfolio/toast-notifications.html'"><h2>Toast Notifications</h2></a>
+                    <h5 class="project-info-header-company">ExtraHop</h5>
                 </div>
                 <div class="project-info-body">
-                    <p>Security events often don’t involve just one computer. They are complex chains of events that tell a story. For security analysts, it can be tough to stitch individual occurrences together and get a full picture. </p>
+                    <p>Redesigning the visual and interactive design of notifications to help convey information to users.</p>
+                    
+                </div>
+                <div class="project-info-footer">
                     <div class="tag-container">
                         <p class="tag">Interaction Design</p>
                         <p class="tag">Coding</p>
-                    </div>
-                </div>
-                <div class="project-info-footer">
-                    <button class="generalbutton" onclick="window.location.href='portfolio/toast-notifications.html'">Learn More →</button>    
+                    </div>  
+                    <button class="generalbutton" onclick="window.location.href='portfolio/toast-notifications.html'">More →</button>
                 </div>    
             </div>
         </div>
