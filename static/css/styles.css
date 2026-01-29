@@ -296,6 +296,7 @@ div ul li {
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    white-space: nowrap
 }
 .hero-container {
     display: flex;
