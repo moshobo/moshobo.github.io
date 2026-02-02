@@ -113,6 +113,7 @@ div ul li {
     display: flex;
     flex-direction: row;
     height: 200px;
+    width: 100%;
     padding: 24px;
 }
 .project-info {
