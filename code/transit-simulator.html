@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transit Simulator</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/colors.css">
+    <link rel="icon" href="../data/images/favicon.png" type="image/png">
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init rs ls bi ns us ts ss capture calculateEventProperties vs register register_once register_for_session unregister unregister_for_session gs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fs ds createPersonProfile ps Qr opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing hs debug O cs getPageViewId captureTraceFeedback captureTraceMetric Kr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_8yYMEaN2d4Cj2zfNMkZAEFZnPebOLzZHLjYHEhvgtYU', {
+            api_host: 'https://us.i.posthog.com',
+            defaults: '2025-11-30',
+            person_profiles: 'identified_only',
+        })
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <h3 class="headerbutton" onclick="window.location.href='.././'">Jeremiah Chikota</h3>
+        </div>
+        <ul class="menubar">
+            <li class="menubutton" onclick="window.location.href='../portfolio.html'">Portfolio</li>
+            <li class="menubutton" onclick="window.location.href='../graphic-design.html'">Graphic Design</li>
+            <li class="menubutton" onclick="window.location.href='../code.html'">Code</li>
+            <li class="menubutton" onclick="window.location.href='../about.html'">About</li>
+            <li class="menubutton">
+                <a onclick="window.location.href='data/pdfs/JeremiahChikota - PublicResume - Aug2024.pdf'" download="JeremiahChikota.pdf">Resume</a>
+            </li>
+        </ul>
+    </div>
+    <div class="about-container">
+        <div class="design-container">
+            <h1>Transit Simulator</h1>
+            <p>
+                I saw an awesome <a href="https://x.com/quadmet/status/1768852830012805455">simulated map of the Portland, OR transit system</a>. It was written in the language R, so I was inspired to write a similar version in Python, a language I was more familiar with.
+                My script is able to take any transit agency's GTFS file, a standardized format for transit timetables, and visualize the routes at any day or time. This project is an intersection of my passion for transit and my personal desire to work on coding projects.
+            </p>
+            <div class="project-info-footer" style="margin-top: 20px;">
+                <button class="generalbutton" onclick="window.location.href='https://github.com/moshobo/transit-simulator'">View GitHub Project</button>
+            </div>
+            <div class="image-text-container">
+                <img src="../data/images/code_transitsimulator_FWLE.gif">
+                <div>
+                    <h2>Federal Way Link Extension - Seattle, WA</h2>
+                    <p>In December, 2025, three new stations were added to the 1 Line, shown here in green.</p>
+                    <br>
+                    <p>This simulation uses the label functionality to highlight the three new stations.</p>
+                </div>
+            </div>
+            <div class="image-text-container">
+                <img src="../data/images/code_transitsimulator_R_F_M_E.gif">
+                <div>
+                    <h2>E, F, M, R Trains - New York, NY</h2>
+                    <p>
+                        This simulation shows the busy lines that serve three of New York City's five boroughs; Brooklyn, Manhattan, and Queens.
+                    </p>
+                    <br>
+                    <p>
+                        Here, the vehicle nodes are colored based on their line to help distinguish transit lines that share the same track.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

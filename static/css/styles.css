@@ -113,6 +113,7 @@ div ul li {
     display: flex;
     flex-direction: row;
     height: 200px;
+    width: 100%;
     padding: 24px;
 }
 .project-info {
@@ -296,6 +297,7 @@ div ul li {
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    white-space: nowrap
 }
 .hero-container {
     display: flex;
