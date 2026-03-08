@@ -239,6 +239,15 @@ div ul li {
     height: auto;
     display: block;
 }
+.image-caption {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.image-caption p {
+    font-size: 12px;
+    font-style: italic;
+}
 .image-text-container {
     width: 100%;
     padding: 10px;
