@@ -11,12 +11,12 @@ body {
     font-family: sans-serif;
     width: 100%;
     height: 100%;
-    margin: 0px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--foreground-0);
-    color: var(--background-0)
+    color: var(--background-3)
 }
 h1 {
     font-size: 34px;
@@ -55,7 +55,7 @@ hr {
     width: 100%;
 }
 div ul {
-    margin: 0px;
+    margin: 0;
 }
 div ul li {
     margin: 8px;
@@ -82,8 +82,8 @@ div ul li {
 }
 .menubar {
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
 }
@@ -112,7 +112,7 @@ div ul li {
 .project-container {
     display: flex;
     flex-direction: row;
-    height: 200px;
+    height: fit-content;
     width: 100%;
     padding: 24px;
 }
@@ -120,16 +120,17 @@ div ul li {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    margin: 0px;
+    width: 100%;
+    margin: 0;
 }
 .project-info-header {
-    margin: 0px;
+    margin: 0;
     margin-bottom: 16px;
 }
 .project-info-header h2 {
     display: inline-block;
     width: auto;
-    margin: 0px;
+    margin: 0;
     cursor: pointer;
 }
 .project-info-header:hover h2 {
@@ -137,10 +138,11 @@ div ul li {
     text-decoration-thickness: 1px;
 }
 .project-info-header-company {
-    color: var(--gray-1);
+    color: var(--gray-2);
     text-transform: uppercase;
     font-weight: 200;
-    margin: 0px;
+    font-size: 12px;
+    margin: 0;
 }
 .project-info-body{
     margin-bottom: 16px;
@@ -148,14 +150,14 @@ div ul li {
 .project-info-footer {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
-    gap: 200px;
+    gap: 4px;
 }
 .generalbutton {
-    border-color: var(--background-5);
     background-color: var(--foreground-0);
     color: var(--background-4);
-    border-width: 1px;
+    border: 1px solid var(--background-5);
     border-radius: 4px;
     padding: 4px 8px;
     font-size: 18px;
@@ -163,6 +165,9 @@ div ul li {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    width: fit-content;
+    white-space: nowrap;
+    height: fit-content;
 }
 .generalbutton:hover {
     background-color: var(--foreground-3);
@@ -195,7 +200,7 @@ div ul li {
     width: 100%;
 }
 .design-grid {
-    border: 0px;
+    border: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -264,7 +269,7 @@ div ul li {
     object-fit: contain;
 }
 .image-text-container h2 {
-    margin: 0px;
+    margin: 0;
 }
 .text-container {
     width: 100%;
@@ -276,7 +281,7 @@ div ul li {
     margin-top: 16px;
 }
 .text-container h2 {
-    margin: 0px;
+    margin: 0;
 }
 .portfolio-container{
     display: flex;
@@ -298,7 +303,7 @@ div ul li {
     margin: 16px 0px 4px 0px;
 }
 .portfolio-container p {
-    margin: 0px;
+    margin: 0;
     line-height: 24px;
 }
 .portfolio-container-header {
@@ -322,38 +327,58 @@ div ul li {
 .hero-container h2 {
     font-size: 90px;
     color: var(--foreground-0);
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 .hero-container p {
     font-size: 54px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     line-height: 54px;
+}
+.hero-container--subtle {
+    --background-0: transparent;
+    --foreground-0: var(--background-5);
+    gap: 8px;
+    border: 1px solid var(--background-1);
+}
+.hero-container--subtle h3 {
+    font-family: monospace;
+    margin: 0;
+    font-weight: 400;
+}
+.hero-container--subtle p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 100;
+    font-family: monospace;
 }
 .title-container {
     text-align: center;
     padding-bottom: 32px;
 }
 .title-container h1, p {
-    margin: 0px;
+    margin: 0;
 }
 .icon-container {
-    background-color: var(--background-0);
+    background-color: var(--gray-1);
     border-radius: 8px;
     margin-right: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+    flex-basis: 200px;
     height: fit-content;
     cursor: pointer;
+    overflow: clip;
 }
 .tag-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     margin: 8px 0px;
     gap: 4px;
+    width: 100%;
 }
 .tag {
     background-color: var(--background-4);
@@ -362,7 +387,6 @@ div ul li {
     border-radius: 20px;
     font-size: 12px;
     font-weight: 200;
-    display: inline-block;
     white-space: nowrap;
 }
 .project-metadata {
@@ -382,7 +406,7 @@ div ul li {
 .data-label {
     display: flex;
     align-items: start;
-    color: var(--gray-1);
+    color: var(--gray-2);
     font-size: 18px;
     font-weight: 200;
 }
@@ -410,6 +434,7 @@ div ul li {
         flex-direction: column;
     }
     .project-info-footer {
+        flex-direction: column;
         justify-content: flex-start;
     }
 }

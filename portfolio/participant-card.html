@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Participant Cards</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/colors.css">
+    <link rel="icon" href="../data/images/favicon.png" type="image/png">
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init rs ls bi ns us ts ss capture calculateEventProperties vs register register_once register_for_session unregister unregister_for_session gs getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty fs ds createPersonProfile ps Qr opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing hs debug O cs getPageViewId captureTraceFeedback captureTraceMetric Kr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_8yYMEaN2d4Cj2zfNMkZAEFZnPebOLzZHLjYHEhvgtYU', {
+            api_host: 'https://us.i.posthog.com',
+            defaults: '2025-11-30',
+            person_profiles: 'identified_only',
+        })
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <h3 class="headerbutton" onclick="window.location.href='.././'">Jeremiah Chikota</h3>
+        </div>
+        <ul class="menubar">
+            <li class="menubutton" onclick="window.location.href='../portfolio.html'">Portfolio</li>
+            <li class="menubutton" onclick="window.location.href='../graphic-design.html'">Graphic Design</li> 
+            <li class="menubutton" onclick="window.location.href='../code.html'">Code</li>
+            <li class="menubutton" onclick="window.location.href='../about.html'">About</li>
+            <li class="menubutton">
+                <a onclick="window.location.href='data/pdfs/JeremiahChikota - PublicResume - Aug2024.pdf'" download="JeremiahChikota.pdf">Resume</a>
+            </li>
+        </ul>
+    </div>
+    <div class="about-container">
+        <div class="title-container">
+            <h1>Participant Cards</h1>
+            <div class="project-metadata">
+                <div class="data-container">
+                    <p class="data-label-title">Company</p>
+                    <p class="data-label">ExtraHop</p>
+                </div>
+                <div class="data-container">
+                    <p class="data-label-title">Duration</p>
+                    <p class="data-label">6 Months</p>
+                </div>
+                <div class="data-container">
+                    <p class="data-label-title">Year</p>
+                    <p class="data-label">2024</p>
+                </div>
+                <div class="data-container">
+                    <p class="data-label-title">Role</p>
+                    <p class="data-label">UX Design, UX Research</p>
+                </div>
+            </div>
+            <div class="tag-container">
+                <p class="tag">Information Architecture</p>
+                <p class="tag">Component Design</p>
+                <p class="tag">User Research</p>
+            </div>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Context</h2>
+                <hr>
+            </div>
+            <p>The participant card is a key part of ExtraHop detections. It acts as a “drivers license” for computers, holding critical identifying information that allows security analysts to understand the role the computer plays in an IT network.</p>
+            <img class="image-container" src="../data/images/pc_Solution.png">
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Design Problem</h2>
+                <hr>
+            </div>
+            <p>For a cybersecurity tool, data accuracy is critical. If analysts can't trust the information in a detection, they can't do their jobs effectively.<br><br>Our product team kept hearing that customers were unhappy with the accuracy of detections. Customers reported that information seemed incorrect and confusingly changed over time. Over 10 support cases were filed with customers reporting confusion around IP addresses and device hostnames, representing 9% of our total quarterly support volume. Additionally, a single bug ticket had accumulated more than 15 customer names.<br><br>Not only did this put a burden on the support team, but it was a clear indicator that our design was broadly failing our users. I set out to understand the root cause of this confusion and design a solution that made device data accurate and easy to understand.
+</p>
+            <div class="hero-container">
+                <div>
+                    <h2>9% of support cases</h2>
+                </div>
+                <div>
+                    <p>were due to customer confusion</p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Goals</h2>
+                <hr>
+            </div>
+            <h5>Design Goals</h5>
+            <div>
+                <ul>
+                    <li>Improve information architecture to reduce user confusion</li>
+                    <li>Modernize card design to align with current design language</li>
+                    <li>Utilize atomic component design</li>
+                </ul>
+            </div>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Process</h2>
+                <hr>
+            </div>
+            <h4>Existing Solutions</h4>
+            <p>An example of the previous iteration of the participant card design.</p>
+            <img class="image-contrainer" src="../data/images/pc_process_before_card.png">
+            <div class="image-caption">
+                <p>Single instance of the existing design</p>
+            </div>
+            <img class="image-container" src="../data/images/pc_detectioncard_before.png">
+            <div class="image-caption">
+                <p>Existing card design placed inside a detection card</p>
+            </div>
+            <h4>User Research</h4>
+            <p>To get a better understanding of what was driving the high number of support cases, I conducted user research sessions with both our support team members and end users.<br><br>I started by meeting with our support team, since they were closest to the problem. They stated that the issue with IP addresses (ex: 192.168.1.24) had to do with how they were identified in ExtraHop. There were actually two identification methods: IP observations and time-of-detection IPs. Because these two methods could sometimes return different values, and because the participant card didn't indicate which method was being used, customers were left confused about why the information seemed to change.<br><br>With a clearer picture of the IP address issue, I moved on to conducting usability sessions with customers. I had them walk me through how they would investigate a detection and interact with the participant card. This is where I uncovered a second, related problem. Users frequently mistrusted the device hostname when it was populated with a hostname they knew was outdated or no longer associated with the device. In other cases, there was no hostname shown at all.<br><br>Talking through these reactions with customers, I landed on a key insight: users didn't realize that the participant card was displaying the device name, which in certain circumstances would be a hostname the device had used in the past. The data wasn't wrong, it just wasn't being explained.</p>
+            <div class="hero-container hero-container--subtle">
+                <h3>Hostname</h3>
+                <p>A device hostname is a human-readable name given to computers to make them easier to remember. A hostname like pineapple.example.com is much easier to remember than DN5CHAX13J.</p>
+            </div>
+            <img class="image-container" src="../data/images/pc_process_issue-annotation.png">
+            <div class="image-caption">
+                <p>Annotated screenshot (with redacted information) that I shared internally after customer interviews.</p>
+            </div>
+            <h4>Ideation</h4>
+            <p>From the research sessions, I understood that users would benefit from a more verbose card design that showed the information that they consistently relied upon, such as the device hostname, and the source of this data.<br><br>This project also gave me an opportunity to update the component’s styling to be more in line with the current styling language used across our product. The existing component’s design had remained mostly the same for years and was showing its age.</p>
+            <h4>Low Fidelity Prototype</h4>
+            <p>In my early prototypes, I played around with the styling of the card. I emphasized the information that users had told me was most important. I experimented with a data breakdown that separated hard evidence from device details.</p>
+            <img class="image-container" src="../data/images/pc_process_lofi.png">
+            <h4>High Fidelity Prototype</h4>
+            <p>Later prototypes focused on refining the visual style of the card component.</p>
+            <img class="image-container" src="../data/images/pc_process_hifi.png">
+            <h4>Design Review</h4>
+            <p>Before finalizing the design for development, I met with my design teammates to gather feedback.<br><br>First, we discussed the use of vertical text that said “Offender”. The original intention behind this positioning was to reduce the height of the card. My team’s feedback was that the text direction made it hard to read the text at a glance, almost forcing the user to tilt their head to the side. This design choice was increasing information density while compromising component readability (and our users' necks!).</p>
+            <img class="image-container" src="../data/images/pc_process_vertical-text.png">
+            <p style="margin-top: 32px;">Second, we discussed the device icon. In an effort to reduce visual noise, my initial designs removed the teal icon background and instead inverted the icon fill to white. The downside to this change was an increase in project scope. As the icon is typically used with the teal background, this change would be diverging from our design standards and would have implications in other parts of the product.</p>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Solution</h2>
+                <hr>
+            </div>
+            <p>The new component was designed atomically, utilizing components from our component library. In the new card, I accounted for an expanded set of uses and how the team might use this component in the future.</p>
+            <h4>Atomic Elements</h4>
+            <img class="image-container" src="../data/images/pc_solution_atomic_elements.png">
+            <h4>Participant Card Anatomy</h4>
+            <img class="image-container" src="../data/images/pc_solution_annotated_participant_card.png">
+            <img class="image-container" src="../data/images/pc_solution_systemstyling.png">
+            <div class="image-caption">
+                <p>Card design alongside a similarly styled panel component</p> 
+            </div>
+            <h4>Card Architecture</h4>
+            <p>The card is split horizontally by a diving line which serves two purposes: visual grouping and logical grouping. Content above the line is all about the device object which exists in ExtraHop outside of the detection. Below the line is information that pertains to the detection that the user is currently viewing.<br><br>In the upper card section, I selected larger font sizes and brightly colored icons to increase the visual weight. The information here is key for the user to quickly scan and access.<br><br>For the information below the divide, I applied a smaller font size to allow for greater information density. To keep good “scanability” of the information, the values use the more prominent primary font color, while their labels are more subdued.</p>
+            <h4>Card Data</h4>
+            <p>To overcome the confusion around device names and device hostnames, I added a permanent “Hostname” field to the card. Now, users have a consistent place to find the fields.</p>
+            <img class="image-container" src="../data/images/pc_solution_name-v-hostname.png">
+            <p style="margin-top: 32px;">To remediate the IP address issues, I designed the card to show an information icon when the IP address source was an observed IP (the system's best guess based on data over the last 24 hours). When the user hovers over this icon, they see explanation text about the source of the IP address and why there might be discrepancies. This solution gives users a visual identifier as to which IP method was used. Additionally, it provides users a way to clarify their questions about the IP address source without having to start a lengthy support process.</p>
+            <img class="image-container" src="../data/images/pc_solution_observed-ip.png">
+            <p style="margin-top: 32px;">As part of this redesign process, I heavily scrutinized the data that we should have in the card. There were a number of rarely used and optional fields. I elected to only show these fields when they were populated with data, adding simplicity for the more common use cases. Similarly, there were fields, like the site, that were a property of both the detection and its participants. In the previous design, the same site value was shown on each participant card, so in the redesign I displayed it just once, near the detection title.</p>
+            <h4>Participant List</h4>
+            <p>The participant card is used more widely in the Participant List, which I also updated in this redesign project. I updated the list title (ex: Victims) to use a font with a lighter weight, allowing for more emphasis on the cards themselves.<br><br>I also fixed a long-standing confusion with the ExtraHop terms of “Offender” or “Victim”. For technical users used to computer network terminology, they are more comfortable with “Sender” or “Receiver”. The list title now accommodated the ability to list both terms simultaneously.</p>
+            <img class="image-container" src="../data/images/pc_solution_participant_card_and_list.png">
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Results</h2>
+                <hr>
+            </div>
+            <p>The updated card design launched with firmware version 9.9 in late 2024 and has since been iteratively improved with follow-on features.<br><br>The impact on our support team was immediate. Cases related to IP address and hostname confusion dropped significantly, and the conversations that do come up are easier to resolve. To help customers understand the changes, I joined the support team in presenting a customer webinar that drew over 200 attendees, representing roughly 4% of our customer base.</p>
+            <img class="image-container" src="../data/images/pc_result_detection-card.png">
+            <p style="margin-top: 32px;">The components versatile design meant that I was able to use it in a later project for <a href="../portfolio/smart-investigations.html">Smart Investigations</a>.</p>
+            <img class="image-container" src="../data/images/pc_result_investigation.png">
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-container-header">
+                <h2>Future Work</h2>
+                <hr>
+            </div>
+            <p>Given more time to work on this project, I would have iterated on the shorter version of the participant card. This variant would have worked better in the Participant List and could have allowed us to show more participants before resorting to a “Show More” button.</p>
+            <img class="image-container" src="../data/images/pc_future_card-small.png">
+            <p style="margin-top: 32px;">Secondly, I would revisit removing the device icon background. Ultimately, I believe that the background color just adds too much visual noise to the component. It is one more color in a somewhat colorful component and can end up being distracting.</p>
+            <img class="image-container" src="../data/images/pc_future_card-icon.png">
+        </div>
+        <div class="button-container">
+            <button class="generalbutton" onclick="window.location.href='../portfolio.html'">Back to Portfolio</button>
+        </div>
+    </div>
+</body>
